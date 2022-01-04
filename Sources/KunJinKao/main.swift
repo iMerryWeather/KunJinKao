@@ -11,6 +11,18 @@ func big5ToGBK(big5String : String) -> NSString {
     return NSString(data: big5Data, encoding: gbkEnc)!
 }
 
-let test = "諺璃"
+let STARTUP_MSG =
+"""
+Usage:    kunjinkao
+  -h, --help     display this message.
+  -v, --version  print the kunjinkao version.
+"""
 
-print(big5ToGBK(big5String: test)) //"课件"
+var inputs = [String]()
+while let input = readLine() {
+    inputs.append(input)
+}
+
+for i in inputs {
+    print(big5ToGBK(big5String: i))
+}
