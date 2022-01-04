@@ -28,6 +28,7 @@ if argv.count != 1 {
         print(VERSION)
     } else {
         print("kunjinkao: invalid option -- \(argv[1])")
+        print(STARTUP_MSG)
     }
 } else {
     var inputs = [String]()
